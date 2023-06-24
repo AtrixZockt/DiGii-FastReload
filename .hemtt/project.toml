@@ -2,3 +2,62 @@ name = "DiGii - Fast Reload"
 author = "DiGii"
 prefix = "digii"
 mainprefix = "z"
+
+#modname = "{{prefix}}_mods"
+#key_name = "{{prefix}}_{{version}}"
+#authority = "{{prefix}}_{{version}}"
+
+[files]
+include = [
+    "mod.cpp",
+#    "README.md",
+#    "LICENSE.md",
+#   "KAMLogoLowRes.paa",
+#   "KAMLogoHighRes.paa",
+#   "AUTHORS.txt"
+]
+
+[version]
+git_hash = 0
+
+#[properties]
+#version = "{{git \"id 8\"}}"
+
+[lint.sqf]
+enabled = true # Default: true
+exclude = [
+    "a3/3DEN/UI/macroexecs.inc",
+    "a3/ui_f/hpp/defineResincl.inc",
+    "a3/ui_f/hpp/defineDIKCodes.inc",
+    "a3/ui_f/hpp/defineCommonGrids.inc",
+    "a3/ui_f/hpp/defineCommonColors.inc",
+]
+
+
+
+[asc]
+enabled = true
+exclude = [
+    "/initsettings.sqf",
+    "/initkeybinds.sqf",
+    "/xeh_prep.sqf"
+]
+
+[hemtt.config]
+preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "463939057", # ACE3's Workshop ID
+    "1779063631",
+    "2018593688",
+    "2369477168"
+]
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-filePatching",
+    "-window",
+]

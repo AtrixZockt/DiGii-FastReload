@@ -1,3 +1,3 @@
 // FUNCTION PREPS
 PREP(init);
-PREP(test);
+PREP(fastReload);
