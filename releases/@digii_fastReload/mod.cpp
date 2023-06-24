@@ -1,0 +1,14 @@
+name = "DIGii - Fast Reload";
+dir = "@digii_fastreload";
+picture = "Icon.paa";
+actionName = "Github";
+action = "https://github.com/AtrixZockt/DiGii-FastReload";
+logo = "Icon.paa";
+logoOver = "Icon.paa";
+tooltip = "DiGii - Fast Reload";
+tooltipOwned = "DiGii - Fast Reload";
+overview = "";
+author = "DiGii";
+overviewPicture = "Icon.paa";
+overviewText = "DiGii - Fast Reload";
+overviewFootnote = "";

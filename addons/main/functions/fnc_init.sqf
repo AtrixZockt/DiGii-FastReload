@@ -9,7 +9,7 @@
 * NONE
 *
 * Example:
-* [] call kat_chemical_fnc_init;
+* [] call digii_main_fnc_init;
 *
 * Public: No
 */

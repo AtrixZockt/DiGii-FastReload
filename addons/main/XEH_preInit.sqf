@@ -8,20 +8,17 @@ PREP_RECOMPILE_END;
 
 #define CBA_SETTINGS_CHEM "DiGii - FastReload"
 
-/*
 [
-    QGVAR(availGasmask),
-    "EDITBOX",
-    [LLSTRING(SETTING_AVAIL_GASMASK), LLSTRING(SETTING_AVAIL_GASMASK_DISC)],
+    QGVAR(allowAllWeapons),
+    "CHECKBOX",
+    ["Allow all Weapons","If enabled you can fast realod any weapon you can carry."],
     CBA_SETTINGS_CHEM,
-    "'G_AirPurifyingRespirator_01_F'",
-    1,
+    false,
+    true,
     {
-        private _array = [_this, "CfgGlasses"] call FUNC(getList);
-        missionNamespace setVariable [QGVAR(availGasmaskList), _array, true];
-    },
-    true
-] call CBA_Settings_fnc_init;*/
+        missionNamespace setVariable [QGVAR(allowAllWeapons), _this, true];
+    }
+] call CBA_Settings_fnc_init;
 
 
 ADDON = true;

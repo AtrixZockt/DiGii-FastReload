@@ -10,11 +10,9 @@ mainprefix = "z"
 [files]
 include = [
     "mod.cpp",
-#    "README.md",
-#    "LICENSE.md",
-#   "KAMLogoLowRes.paa",
-#   "KAMLogoHighRes.paa",
-#   "AUTHORS.txt"
+    "README.md",
+    "LICENSE.md",
+    "Icon.paa",
 ]
 
 [version]
