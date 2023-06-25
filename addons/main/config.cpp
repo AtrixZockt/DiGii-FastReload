@@ -8,8 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_Data_F_Tank_Loadorder",
-            "cba_main",
-            "ace_main"
+            "cba_main"
         };
         author = "DiGii";
         url = CSTRING(URL);

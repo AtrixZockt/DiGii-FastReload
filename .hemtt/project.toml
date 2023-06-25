@@ -47,10 +47,10 @@ preset = "Hemtt"
 [hemtt.launch]
 workshop = [
     "450814997", # CBA_A3's Workshop ID
-    "463939057", # ACE3's Workshop ID
-    "1779063631",
-    "2018593688",
-    "2369477168"
+#    "463939057", # ACE3's Workshop ID
+#    "1779063631",
+#    "2018593688",
+#    "2369477168"
 ]
 parameters = [
     "-skipIntro",           # These parameters are passed to the Arma 3 executable

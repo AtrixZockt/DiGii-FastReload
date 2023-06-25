@@ -14,20 +14,19 @@ GVAR(deviceKeyCurrentIndex) = -1;
 
 ["DiGii Reload", QGVAR(unloadWeapon), "Fast Reload", {
     // Conditions:
-    if !([ACE_player, objNull, ["isNotInside"]] call ACEFUNC(common,canInteractWith)) exitWith {false};
 
     private _allowedWeapons = ['AssaultRifle', 'Handgun', 'Rifle', 'SubmachineGun', 'SniperRifle'];
-    private _currentWeapon = currentWeapon ACE_player;
+    private _currentWeapon = currentWeapon player;
     private _currentWeaponType = _currentWeapon call BIS_fnc_itemType;
     if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
 
     if (!((_currentWeaponType select 1) in _allowedWeapons) && !(missionNamespace getVariable [QGVAR(allowAllWeapons), false])) exitWith {false};
 
-    private _currentMuzzle = currentMuzzle ACE_player;
-	private _currentAmmoCount = ACE_player ammo _currentMuzzle;
+    private _currentMuzzle = currentMuzzle player;
+	private _currentAmmoCount = player ammo _currentMuzzle;
 	if (_currentAmmoCount < 1) exitWith {false};
 
     // Statement:
-    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount] call FUNC(fastReload);
+    [player, _currentWeapon, _currentMuzzle, _currentAmmoCount] call FUNC(fastReload);
     true
 }, {false}, [DIK_R, [true, false, false], true]] call CBA_fnc_addKeybind; //Shift + R Key

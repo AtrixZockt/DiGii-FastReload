@@ -22,7 +22,7 @@
 params ["_unit", "_weapon", ["_muzzle", _weapon], ["_ammoCount", _unit ammo _muzzle ]];
 
 private _delay = 1.8;
-[_unit, "ReloadMagazine", 1] call ACEFUNC(common,doGesture);
+_unit playActionNow "ReloadMagazine";
 
 // remove weapon item
 private _magazineClass = currentMagazine _unit;

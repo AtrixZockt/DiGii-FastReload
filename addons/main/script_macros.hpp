@@ -5,8 +5,8 @@
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
 
-#define DGVAR(varName)    if(isNil "KAT_DEBUG_NAMESPACE") then { KAT_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in KAT_DEBUG_NAMESPACE)) then { PUSH(KAT_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
-#define DVAR(varName)     if(isNil "KAT_DEBUG_NAMESPACE") then { KAT_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in KAT_DEBUG_NAMESPACE)) then { PUSH(KAT_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
+#define DGVAR(varName)    if(isNil "DiGii_DEBUG_NAMESPACE") then { DiGii_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in DiGii_DEBUG_NAMESPACE)) then { PUSH(DiGii_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
+#define DVAR(varName)     if(isNil "DiGii_DEBUG_NAMESPACE") then { DiGii_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in DiGii_DEBUG_NAMESPACE)) then { PUSH(DiGii_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
@@ -60,18 +60,6 @@
     count = COUNT; \
 }
 
-// ACE3 reference macros
-#define ACE_PREFIX ace
-
-#define ACEGVAR(module,var)         TRIPLES(ACE_PREFIX,module,var)
-#define QACEGVAR(module,var)        QUOTE(ACEGVAR(module,var))
-
-#define ACEFUNC(module,function)    TRIPLES(DOUBLES(ACE_PREFIX,module),fnc,function)
-#define QACEFUNC(module,function)   QUOTE(ACEFUNC(module,function))
-
-#define ACELSTRING(module,string)   QUOTE(TRIPLES(STR,DOUBLES(ACE_PREFIX,module),string))
-#define ACECSTRING(module,string)   QUOTE(TRIPLES($STR,DOUBLES(ACE_PREFIX,module),string))
-
 // item types
 #define TYPE_DEFAULT 0
 #define TYPE_MUZZLE 101
@@ -106,11 +94,11 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
-#define KAT_isHC (!hasInterface && !isDedicated)
+#define DiGii_isHC (!hasInterface && !isDedicated)
 
 #define IDC_STAMINA_BAR 193
 
-#define KAT_DEPRECATED(arg1,arg2,arg3) WARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
+#define DiGii_DEPRECATED(arg1,arg2,arg3) WARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #define PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
     format ['%1: A=%2, B=%3, C=%4, D=%5, E=%6, F=%7, G=%8, H=%9, I=%10 J=%11', MESSAGE, RETNIL(A), RETNIL(B), RETNIL(C), RETNIL(D), RETNIL(E), RETNIL(F), RETNIL(G), RETNIL(H), RETNIL(I), RETNIL(J)]
